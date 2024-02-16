@@ -7,7 +7,7 @@
     push:
         branches: ["main"]
     pull_request: 
-          branches: ["main", "dev"]
+          branches: ["main", "fix/workflow-changes"]
 
   jobs:
       build:
