@@ -40,16 +40,15 @@
               - run: npm test
 
               - name: Start MongoDB
-                run: sudo service mongodb start # Adjust based on your needs; might not be necessary with the services setup
+                run: sudo service mongodb start 
               
               - name: Start server
                 run: node server.js &
                 env:
-                  MONGODB_URI: mongodb://localhost:27017/db
-                  #MONGODB_URI: mongodb://localhost:4000
-                  # Adjust the database name as needed
+                  #MONGODB_URI: mongodb://localhost:27017/db
+                  MONGODB_URI: mongodb://localhost:4000
                   #C:\Users\ASUS\Documents\GitHub\C01Lab5\quirknotes\backend\data\db
               - name: Run tests
                 run: npm test
                 env:
-                  MONGODB_URI: mongodb://localhost:27017/db
+                  MONGODB_URI: mongodb://localhost:4000
